@@ -1,0 +1,28 @@
+header img {
+    width: 60px;
+    height: auto;
+}
+main {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 10% 10% 10%;
+}
+p {
+    font-size: 14px;
+}
+/* a {
+display: flex;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+} */
+.linediv {
+    background-color: black;
+    height: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

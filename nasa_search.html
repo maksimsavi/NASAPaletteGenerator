@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <p>astronomy picture of the day:</p>
+        <form id="apodForm">
+            <input type="date" name="apodDate" id="apodDate" placeholder="2016-09-29">
+            <input type="submit" value="get picture">
+        </form>
+       <!-- <div class="linediv"></div>-->
+       <p>NASA image library</p>
+        <form>
+            <input type="text" name="nasasearch" id="nasasearch" placeholder="stars, missions, etc.">
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <script src="data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="nasa_search.js"></script>
+</body>
+</html>
