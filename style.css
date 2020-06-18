@@ -11,6 +11,10 @@ main {
 p {
     font-size: 14px;
 }
+img {
+    width: 200px;
+    
+}
 /* a {
 display: flex;
 justify-content: center;
