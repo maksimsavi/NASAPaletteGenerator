@@ -25,6 +25,11 @@ function writeColorBlock(element) {
 function loadResults() {
   console.log('url fetch: success. result: '+imgURL);
   $( "main" ).empty();
-  $( "main" ).html(palleteHTML);
+  $( "main" ).html(
+    `
+<img src="${imgURL}" alt="Image color is extracted from">
+        <section class="colorBlocks"></section>
+`
+  );
   getColors();
 }

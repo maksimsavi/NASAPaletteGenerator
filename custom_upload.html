@@ -9,18 +9,28 @@
 <body>
     <main>
         <p>URL</p>
-        <form>
+        <form id="customURLForm">
             <input type="text" name="customURL" id="customURL" placeholder="image URL">
             <input type="submit" value="GO">
         </form>
        <!-- <div class="linediv"></div>-->
+       <!--
        <p>or</p>
-        <form>
-            <input type="image" src="" alt="">
-            
+        <form id="customUploadForm" method="POST" action="/images">
+            <input type="file" name="customUpload" id="customUpload" accept="image/png, image/jpeg, image/jpg">
+            <input type="submit" value="upload">
         </form>
+        <p>custom upload is under construction DO NOT TRY TO UPLOAD</p>
+        <p>because your machine will explore.</p>
+        -->
     </main>
+    
+    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+    <script src="scripts/data.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/nasa_search_apod.js"></script>
+    <script src="scripts/nasa_search_database.js"></script>
+    <script src="scripts/clarifai.js"></script>
+    <script src="scripts/custom_upload.js"></script>
 </body>
 </html>

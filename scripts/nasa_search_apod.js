@@ -2,16 +2,17 @@
 function apodFormSubmitHandler () {
     $( "#apodForm" ).submit(function( event ) {
         event.preventDefault();
-        fetchAPOD();
+        var APODQueryDate = $( "input[name=apodDate]" ).val();
+        fetchAPOD(APODQueryDate);
       });
 }
-function fetchAPOD () {
+function fetchAPOD (date) {
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
       };
       
-      fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASAapiKey}&date=${currentDate}`, requestOptions)
+      fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASAapiKey}&date=${date}`, requestOptions)
         .then(res => {
             if (!res.ok) {
                 return res.json()
@@ -24,7 +25,7 @@ function fetchAPOD () {
         .then(result => 
             evaluateData(result)
         )
-        .catch(error => alert(error));
+        .catch(error => alert('Something went wrong! Here is some info: '+error));
 }
 function evaluateData (result) {
     if (result.media_type != 'image') {
@@ -40,10 +41,12 @@ function getToday (){
     var mm = String(currentDate.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = currentDate.getFullYear();
     currentDate = yyyy + '-' + mm + '-' + dd;
+    
 }
 
 function runSearch () {
     getToday();
+    $("input[name='apodDate']").attr('placeholder', `${currentDate}`)
     apodFormSubmitHandler();
 }
 $(runSearch());
