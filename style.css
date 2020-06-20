@@ -364,7 +364,7 @@ main {
     animation-name: fade;
     animation-duration: 0.3s;
 }
-section, .colorBlock {
+section, .colorBlock, .info, header {
     animation-name: fade;
     animation-duration: 0.5s; 
 }
@@ -419,10 +419,12 @@ p {
 }
 p.info {
     font-size: 14px;
-    margin-top: 100px;
+    margin-right: auto;
+    margin-left: 20px;
     color: #d0bdf4;
     display: block;
-    width: 70%;
+    width: 90%;
+    position: fixed;
 }
 button, input[type="submit"] {
     background-color: #a0d2eb;
@@ -437,6 +439,7 @@ button, input[type="submit"] {
     border: 2px solid #a0d2eb;
     
 }
+
 button:active, input[type="submit"]:active {
 animation-name: buttons;
 animation-duration: 0.7s;
@@ -536,5 +539,8 @@ header img {
     width: 250px;
     height: 70px;
     font-size: 20px;
+  }
+  p.info {
+      width: 50%;
   }
 }
