@@ -19,7 +19,7 @@ function getColors () {
 }
 function writeColorBlock(element) {
     console.log(element.raw_hex);
-    $( ".colorBlocks" ).append( `<div style="background-color: ${element.raw_hex}">${element.raw_hex}</div>` );
+    $( ".colorBlocks" ).append( `<div style="background-color: ${element.raw_hex}" class="colorBlock"><div class="highlight">${element.raw_hex}</div></div>` );
 }
 
 function loadResults() {
@@ -27,9 +27,13 @@ function loadResults() {
   $( "main" ).empty();
   $( "main" ).html(
     `
-<img src="${imgURL}" alt="Image color is extracted from">
+<section>    
+<img src="${imgURL}" class="card" alt="Image color is extracted from">
         <section class="colorBlocks"></section>
-`
+</section>
+        `
   );
+
+
   getColors();
 }

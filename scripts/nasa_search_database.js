@@ -49,7 +49,7 @@ function extractNIVLImages (resultArray) {
 function loadNIVLResults(array) {
     $('main').html(searchResultsHTML);
     array.forEach(element => {
-        $('.imageroll').append(`<img src="${element}" id="imageToProcess" alt="Image from search results">`);
+        $('.imageroll').append(`<img src="${element}" class="card"id="imageToProcess" alt="Image from search results">`);
     });
 }
 

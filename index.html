@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NASA Color Palette Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
+    <section>
         <p>search through nasa:</p>
         <a href="nasa_search.html" class="linkbutton"><button>search</button></a>
         <p>link your own:</p>
         <a href="custom_upload.html" class="linkbutton"><button>custom</button></a>
+    </section>
     </main>
+    <script src="scripts/data.js"></script>
+    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/nasa_search_apod.js"></script>
+    <script src="scripts/nasa_search_database.js"></script>
+    <script src="scripts/clarifai.js"></script>
 </body>
 </html>
