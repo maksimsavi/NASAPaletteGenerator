@@ -1,6 +1,6 @@
 'use strict'
 function apodFormSubmitHandler () {
-    $( "#apodForm" ).submit(function( event ) {
+    $('html').on('submit', '#apodForm', function( event ) {
         event.preventDefault();
         var APODQueryDate = $( "input[name=apodDate]" ).val();
         fetchAPOD(APODQueryDate);

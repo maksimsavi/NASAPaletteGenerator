@@ -360,10 +360,18 @@ main {
     margin-right: auto;
     display: flex;
     justify-content: center;
+    padding-top: 70px;
+    animation-name: fade;
+    animation-duration: 0.3s;
 }
-main > section {
-    margin-top: 100px;
+section, .colorBlock {
+    animation-name: fade;
+    animation-duration: 0.5s; 
 }
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
 img.card {
     min-width: 300px;
     width: 100%;
@@ -383,7 +391,7 @@ img.card {
 .highlight {
     background-color: black;
     padding: 5px 5px 5px 15px;
-    width: 120px;
+    width: 105px;
     border-right: 2px solid black;
     border-radius: 2px;
 }
@@ -401,19 +409,20 @@ body {
     color: #e5eaf5;
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
+    
 }
 a {
     text-decoration: none;
 }
 p {
-    font-size: 40px;
+    font-size: 30px;
 }
 button, input[type="submit"] {
     background-color: #a0d2eb;
-    width: 250px;
-    height: 70px;
+    width: 200px;
+    height: 50px;
     color: #494D5f;
-    font-size: 25px;
+    font-size: 18px;
     
     display: block;
     margin-left: auto;
@@ -421,13 +430,57 @@ button, input[type="submit"] {
     border: 2px solid #a0d2eb;
     
 }
+button:active, input[type="submit"]:active {
+animation-name: buttons;
+animation-duration: 0.7s;
+}
+@keyframes buttons {
+    0% {background-color: #a0d2eb;
+        color: #494D5f;
+        border: 2px solid #a0d2eb;
+    }
+    50% {
+        background-color: #494d5f;
+        color: #e5eaf5;
+        border: 2px solid #e5eaf5;
+    }
+    100% {background-color: #a0d2eb;
+        color: #494D5f;
+        border: 2px solid #a0d2eb;}
+  }
+  button:hover, input[type="submit"]:hover {
+    animation-name: buttons;
+    animation-duration: 2s;
+    }
+    @keyframes buttons {
+        0% {background-color: #a0d2eb;
+            color: #494D5f;
+            border: 2px solid #a0d2eb;
+        }
+        10% {background-color: #494d5f;
+            color: #e5eaf5;
+            border: 2px solid #e5eaf5
+        }
+        90% {
+            background-color: #494d5f;
+            color: #e5eaf5;
+            border: 2px solid #e5eaf5;
+        }
+        100% {
+            background-color: #a0d2eb;
+            color: #494D5f;
+            border: 2px solid #a0d2eb;
+        }
+    }
+        
+
 input[type="text"], input[type="date"]{
-    
-    width: 250px;
+    padding-left: 5px;
+    width: 200px;
     
     height: 50px;
     color: #494D5f;
-    font-size: 25px;
+    font-size: 14px;
     
     display: block;
     margin-left: auto;
@@ -437,8 +490,11 @@ input[type="text"], input[type="date"]{
 }
 header {
     display: block;
+    position: fixed;
+    height: 70px;
     width: 100%;
-    background-color: #494D5f;
+    background-color: rgba(73, 77, 95, 0.8);
+    
 }
 header img {
     width: 80px;
@@ -460,4 +516,18 @@ header img {
         max-width: 100%;
         flex-wrap: wrap;
     }
+    
+    p {
+        font-size: 40px;
+    }
+    button, input[type="submit"] {
+        width: 250px;
+        height: 70px;
+        font-size: 20px;
   }
+  input[type="text"], input[type="date"]{
+    width: 250px;
+    height: 70px;
+    font-size: 20px;
+  }
+}

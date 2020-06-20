@@ -1,24 +1,27 @@
 'use strict'
-function customFormSubmitHandler () {
-    $( "#customURLForm" ).submit(function( event ) {
+function customURLFormSubmitHandler () {
+    //listens for the click on main page
+    $('html').on('submit', '#customURLForm', function( event ) {
         event.preventDefault();
         imgURL = $( "input[name=customURL]" ).val();
-        console.log(customURL);
-        loadResults(customURL);
+        console.log(imgURL);
+        loadResults(imgURL);
       });
 }
 
-function customFormSubmitHandler () {
-    $( "#customUploadForm" ).submit(function( event ) {
+function customUploadFormSubmitHandler () {
+    //this one is for an upload feature which is under construction
+    $('html').on('submit', '#uploadForm', function( event ) {
         event.preventDefault();
-        imgUpload = $( "input[name=customUpload]" ).val();
-        console.log(imgUpload);
-       // loadResults(customURL);
+        imgURL = $( "input[name=customUpload]" ).val();
+        console.log(customURL);
+        loadResults(imgURL);
       });
 }
+
 
 function runItUp(){
-    customFormSubmitHandler();
-    
+    customURLFormSubmitHandler();
+    //customUploadFormSubmitHandler();
 }
 $(runItUp());

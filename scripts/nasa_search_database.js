@@ -1,6 +1,6 @@
 'use strict'
-function apodFormSubmitHandler () {
-    $( "#NIVLForm" ).submit(function( event ) {
+function NIVLFormSubmitHandler () {
+    $('html').on('submit', '#NIVLForm', function( event ) {
         event.preventDefault();
         NIVLQuery = encodeURI($( "input[name=nasasearch]" ).val());
         fetchNIVL(NIVLQuery);
@@ -55,7 +55,7 @@ function loadNIVLResults(array) {
 
 //tracking image click
 function selectImage() {
-    $('main').on('click', '#imageToProcess', function(){
+    $('html').on('click', '#imageToProcess', function(){
         imgURL = $(this).attr('src');
         console.log($(this).attr('src'));
         loadResults(imgURL);
@@ -63,7 +63,7 @@ function selectImage() {
 }
 
 function runItUp(){
-    $(apodFormSubmitHandler());
+    $(NIVLFormSubmitHandler());
     $(selectImage());
 }
 runItUp();
