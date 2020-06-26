@@ -9,7 +9,9 @@ function loadCustom() {
         $('body').html(customUploadHTML);
     });
 }
-
+function loadCustomImmediate() {
+    $('body').html(customUploadHTML);
+}
 function runnethItUp () {
     loadNASASearch();
     loadCustom();

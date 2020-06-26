@@ -390,8 +390,8 @@ img.card {
 }
 .highlight {
     background-color: black;
-    padding: 5px 5px 5px 15px;
-    width: 105px;
+    padding: 5px 5px 5px 5px;
+    width: 110px;
     border-right: 2px solid black;
     border-radius: 2px;
 }

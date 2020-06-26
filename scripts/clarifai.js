@@ -10,10 +10,12 @@ function getColors () {
     function(response) {
         APIres = response.outputs[0].data.colors;
         console.log(APIres);
+        loadResults();
         APIres.forEach(element => writeColorBlock(element));
     },
     function(err) {
-      console.log(err)
+      console.log(err);
+      alert(`This link didn't work. Make sure you copy a direct link to an image.`)
     }
   );
 }
@@ -33,7 +35,5 @@ function loadResults() {
 </section>
         `
   );
-
-
-  getColors();
+//getColors();
 }

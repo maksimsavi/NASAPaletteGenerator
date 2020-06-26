@@ -35,6 +35,7 @@ function extractNIVLImages (resultArray) {
     if (resultArray[1] === undefined) {
         
         console.log(NIVLImageURLList)
+        alert(`Couldn't find anything :(`)
     } else {
         resultArray.forEach(element => {
             NIVLImageURLList.push(element.links[0].href)

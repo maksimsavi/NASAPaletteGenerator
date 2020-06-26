@@ -5,7 +5,7 @@ function customURLFormSubmitHandler () {
         event.preventDefault();
         imgURL = $( "input[name=customURL]" ).val();
         console.log(imgURL);
-        loadResults(imgURL);
+        getColors(imgURL);
       });
 }
 
@@ -15,7 +15,7 @@ function customUploadFormSubmitHandler () {
         event.preventDefault();
         imgURL = $( "input[name=customUpload]" ).val();
         console.log(customURL);
-        loadResults(imgURL);
+        getColors(imgURL);
       });
 }
 
@@ -25,3 +25,6 @@ function runItUp(){
     //customUploadFormSubmitHandler();
 }
 $(runItUp());
+
+//!!!!!!!!!!!
+//write function that checks if link ends in an acceptable file format (.jpg, png, etc.)
