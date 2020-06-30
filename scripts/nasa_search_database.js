@@ -59,7 +59,7 @@ function selectImage() {
     $('html').on('click', '#imageToProcess', function(){
         imgURL = $(this).attr('src');
         console.log($(this).attr('src'));
-        loadResults(imgURL);
+        getColors(imgURL);
     });
 }
 

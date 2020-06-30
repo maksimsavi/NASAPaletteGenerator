@@ -32,7 +32,7 @@ function evaluateData (result) {
         alert('Today\'s file is not an image. Please search through the database instead.');
     } else {
         imgURL = result.url;
-        $(loadResults(imgURL));
+        $(getColors(imgURL));
     }
 }
 function getToday (){
